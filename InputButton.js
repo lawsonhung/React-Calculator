@@ -13,7 +13,8 @@ export default class InputButton extends Component {
     console.log("What is this.props from inputButton.js: ", this.props);
     
     return (
-      <TouchableHighlight style={Style.inputButton}
+      <TouchableHighlight style={[Style.inputButton, 
+        this.props.highlight ? Style.inputButtonHighlighted : null]}
                           underlayColor="#193441"
                           onPress={this.props.onPress}>
         <Text style={Style.inputButtonText}>{this.props.value}</Text>

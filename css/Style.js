@@ -38,6 +38,10 @@ var Style = StyleSheet.create({
     color: 'white',
   },
 
+  inputButtonHighlighted: {
+    backgroundColor: '#193441',
+  },
+
   inputRow: {
     flex: 1,
     flexDirection: 'row',
