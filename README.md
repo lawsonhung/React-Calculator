@@ -8,3 +8,5 @@ To start app on command line:
 
 # For iOS
 ### `react-native run-ios`
+
+Source: https://kylewbanks.com/blog/react-native-tutorial-part-1-hello-react
