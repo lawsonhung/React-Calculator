@@ -22,9 +22,9 @@ import InputButton from './InputButton';
 
 // Define the input buttons that will be displayed in the calculator via a 2 dimensional array
 const inputButtons = [
-  [1, 2, 3, '/'],
+  [7, 8, 9, '/'],
   [4, 5, 6, '*'],
-  [7, 8, 9, '-'],
+  [1, 2, 3, '-'],
   [0, '.', '=', '+']
 ];
 
@@ -96,6 +96,16 @@ class ReactCalculator extends Component {
 
   _handleStringInput(str) {
     switch (str) {
+      case '.':
+        let inputValueInt = parseInt(this.state.inputValue);
+        // let newInputValue = inputValueInt.concat("test");
+
+        this.setState({
+          selectedSymbol: str,
+          previousInputValue: this.state.inputValue,
+          inputValue: inputValueInt
+        });
+        break;
       case '/':
       case '*':
       case '+':
