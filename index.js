@@ -97,10 +97,13 @@ class ReactCalculator extends Component {
   _handleStringInput(str) {
     switch (str) {
       case '.':
+        let inputValueInt = parseInt(this.state.inputValue);
+        // let newInputValue = inputValueInt.concat("test");
+
         this.setState({
           selectedSymbol: str,
           previousInputValue: this.state.inputValue,
-          inputValue: '.'
+          inputValue: inputValueInt
         });
         break;
       case '/':
