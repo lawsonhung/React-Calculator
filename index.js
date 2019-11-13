@@ -96,6 +96,13 @@ class ReactCalculator extends Component {
 
   _handleStringInput(str) {
     switch (str) {
+      case '.':
+        this.setState({
+          selectedSymbol: str,
+          previousInputValue: this.state.inputValue,
+          inputValue: '.'
+        });
+        break;
       case '/':
       case '*':
       case '+':
